@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.ArrayList; //importando pacotes para ARRAYS
+import java.util.Scanner; // importanto pacote para ler dados digitados
 
 public class Jogo {
     private final Palavra palavra;
@@ -25,7 +25,7 @@ while (!this.palavra.palavraCompleta() && chutes.size() < numeroChutes){
     System.out.println("Digite seu chute");
     String chute = scanner.nextLine();
     if (chutes.contains(chute)){
-        System.out.println("Você jpa chutou essa letra! Tente novamente!");
+        System.out.println("Você já chutou essa letra! Tente novamente!");
         continue;
     }
     chutes.add(chute);
@@ -36,7 +36,7 @@ while (!this.palavra.palavraCompleta() && chutes.size() < numeroChutes){
     if (this.palavra.palavraCompleta()){
         System.out.println("Parabéns, "+ this.jogador.getNome()+" você acertou!");
     } else if (chutes.size()== numeroChutes){
-        System.out.println(this.jogador.getNome() + " você perdeu. Apalavra secreta era: "+this.palavra.getPalavraSecreta());
+        System.out.println(this.jogador.getNome() + " você perdeu. A palavra secreta era: "+this.palavra.getPalavraSecreta());
     }
 
 
